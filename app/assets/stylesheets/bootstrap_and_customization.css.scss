@@ -12,6 +12,28 @@ $jumbotron-bg:                                         white;
 @import "bootstrap-sprockets";
 @import 'bootstrap';
 
+.custbody {
+  background:url('../images/br.jpg') no-repeat;
+  background-size: cover;
+  
+}
+
+
+
+
+.cust {
+  color: grey;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+}
+
+.custcopy {
+  color: grey;
+  text-align: left;
+  font-size: 15px;
+}
+
 .checkbox input[type="checkbox"] {
   margin-left: 0;
 }
