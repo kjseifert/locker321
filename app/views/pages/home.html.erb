@@ -21,8 +21,30 @@
 	
 	
 	<% if user_signed_in? %>
-	#do something
+	#This Month's Special...
 	
+       <%= form_tag charges_path do %>
+          <article>
+            <% if flash[:error].present? %>
+              <div id="error_explanation">
+                <p><%= flash[:error] %></p>
+              </div>
+            <% end %>
+            <label class="amount">
+              <span>Amount: $5.00</span>
+            </label>
+          </article>
+        
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="pk_test_CebDupceufAFC1vbZ4XHoEEY"
+                  data-description="Purchse Item"
+                  data-billingAddress="true"
+                  data-shippingAddress="true"
+                  data-amount="500"
+                  data-locale="auto"></script>
+        <% end %>
+            
+            
       <%else%>
 	
         	<p>
@@ -48,4 +70,7 @@
 
 
 
+<script type="text/javascript">
+  Stripe.setPublishableKey('pk_test_CebDupceufAFC1vbZ4XHoEEY');
+</script>
 </body>

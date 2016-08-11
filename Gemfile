@@ -15,7 +15,8 @@ gem 'devise'
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'masonry-rails'
 gem 'devise'
-
+gem 'stripe'
+gem 'figaro'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
